@@ -1,6 +1,6 @@
 package task0318;
 
-/* 
+/*
 План по захвату мира
 Ввести с клавиатуры число и имя, вывести на экран строку:
 "имя" захватит мир через "число" лет. Му-ха-ха!
@@ -26,6 +26,12 @@ import java.io.*;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        // Напишите ваш код здесь
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите число: ");
+        int num = Integer.parseInt(br.readLine());
+        System.out.println("Введите имя: ");
+        String str = br.readLine();
+        br.close();
+        System.out.println(str + " захватит мир через " + num + " лет. Му-ха-ха!");
     }
 }

@@ -1,7 +1,6 @@
 package task0442;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /* 
 Суммирование
@@ -25,8 +24,21 @@ Requirements:
 */
 
 public class Solution {
-    public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
-
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum = 0;
+        boolean flag = true;
+        while (flag) {
+            if (n == -1) {
+                sum += n;
+                flag = false;
+                sc.close();
+                System.out.println("Sum = " + sum);
+            } else {
+                sum += n;
+                n = sc.nextInt();
+            }
+        }
     }
 }

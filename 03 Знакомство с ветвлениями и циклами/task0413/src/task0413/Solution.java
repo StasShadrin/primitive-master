@@ -24,7 +24,23 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите число: ");
+        int day = Integer.parseInt(br.readLine());
+        br.close();
+        checkDayOfWeek(day);
+    }
 
+    public static void checkDayOfWeek(int day) {
+        System.out.println(switch (day) {
+            case 1 -> "понедельник";
+            case 2 -> "вторник";
+            case 3 -> "среда";
+            case 4 -> "четверг";
+            case 5 -> "пятница";
+            case 6 -> "суббота";
+            case 7 -> "воскресенье";
+            default -> "такого дня недели не существует";
+        });
     }
 }

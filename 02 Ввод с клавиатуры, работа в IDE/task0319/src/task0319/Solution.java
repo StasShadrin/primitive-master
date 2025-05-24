@@ -24,7 +24,14 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
-
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите имя: ");
+        String name = br.readLine();
+        System.out.println("Введите число1: ");
+        int num1 = Integer.parseInt(br.readLine());
+        System.out.println("Введите число2: ");
+        int num2 = Integer.parseInt(br.readLine());
+        br.close();
+        System.out.println(name + " получает " + num1 + " через " + num2 + " лет.");
     }
 }

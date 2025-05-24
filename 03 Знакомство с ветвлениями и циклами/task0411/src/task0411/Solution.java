@@ -27,7 +27,12 @@ public class Solution {
     }
 
     public static void checkSeason(int month) {
-        //напишите тут ваш код
-
+        System.out.println(switch (month) {
+            case 12, 1, 2 -> "зима";
+            case 3, 4, 5 -> "весна";
+            case 6, 7, 8 -> "лето";
+            case 9, 10, 11 -> "осень";
+            default -> "нет такого месяца";
+        });
     }
 }

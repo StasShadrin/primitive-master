@@ -1,7 +1,6 @@
 package task0417;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /* 
 Существует ли пара?
@@ -33,8 +32,25 @@ Requirements:
 */
 
 public class Solution {
-    public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numberOne = sc.nextInt();
+        int numberTwo = sc.nextInt();
+        int numberThree = sc.nextInt();
+        sc.close();
+        System.out.println(checkPair(numberOne, numberTwo, numberThree));
+    }
 
+    public static String checkPair(int numberOne, int numberTwo, int numberThree) {
+        if (numberOne == numberTwo && numberOne == numberThree) {
+            return numberOne + " " + numberTwo + " " + numberThree;
+        } else if (numberOne == numberTwo) {
+            return numberOne + " " + numberTwo;
+        } else if (numberOne == numberThree) {
+            return numberOne + " " + numberThree;
+        } else if (numberTwo == numberThree) {
+            return numberTwo + " " + numberThree;
+        }
+        return "";
     }
 }

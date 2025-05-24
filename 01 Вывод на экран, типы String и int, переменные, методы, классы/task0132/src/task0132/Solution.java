@@ -25,6 +25,8 @@ public class Solution {
     }
 
     public static int sumDigitsInNumber(int number) {
-        //напишите тут ваш код
+       return String.valueOf(Math.abs(number)).chars()
+                .map(c -> c - '0')
+                .sum();
     }
 }
