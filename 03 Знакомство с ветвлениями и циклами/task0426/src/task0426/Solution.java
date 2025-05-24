@@ -3,6 +3,7 @@ package task0426;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+
 /* 
 Ярлыки и числа
 Ввести с клавиатуры целое число. Вывести на экран его строку-описание следующего вида:
@@ -31,7 +32,24 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int number = Integer.parseInt(br.readLine());
+        System.out.println(getNumber(number));
+    }
 
+    public static String getNumber(int number) {
+        if (number == 0) {
+            return "Ноль";
+        } else if (number < 0) {
+            if (number % 2 == 0) {
+                return "Отрицательное четное число";
+            } else {
+                return "Отрицательное нечетное число";
+            }
+        } else if (number % 2 == 0) {
+            return "Положительное четное число";
+        } else {
+            return "Положительное нечетное число";
+        }
     }
 }

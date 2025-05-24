@@ -1,6 +1,6 @@
 package task0214;
 
-/* 
+/**
 Минимум двух чисел
 Написать функцию, которая возвращает минимум из двух чисел.
 
@@ -17,7 +17,7 @@ Requirements:
 
 public class Solution {
     public static int min(int a, int b) {
-        //напишите тут ваш код
+        return Math.min(a, b);
     }
 
     public static void main(String[] args) {

@@ -1,7 +1,6 @@
 package task0419;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /* 
 Максимум четырех чисел
@@ -17,7 +16,17 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
+        Scanner sc = new Scanner(System.in);
+        int numberOne = sc.nextInt();
+        int numberTwo = sc.nextInt();
+        int numberThree = sc.nextInt();
+        int numberFour = sc.nextInt();
+        sc.close();
+        System.out.println(getMaxOfFour(numberOne, numberTwo, numberThree, numberFour));
+    }
 
+    public static int getMaxOfFour(int numberOne, int numberTwo, int numberThree, int numberFour) {
+
+        return Math.max(Math.max(numberOne, numberTwo), Math.max(numberThree, numberFour));
     }
 }

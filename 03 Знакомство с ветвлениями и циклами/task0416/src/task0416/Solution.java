@@ -1,7 +1,6 @@
 package task0416;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /* 
 Переходим дорогу вслепую
@@ -9,7 +8,7 @@ import java.io.InputStreamReader;
 в начале каждого часа в течение трех минут горит зелёный сигнал,
 затем в течение одной минуты - жёлтый,
 а потом в течение одной минуты - красный,
-затем опять зелёный горит три минуты и т. д.
+затем опять зелёный горит три минуты и т.д.
 Ввести с клавиатуры вещественное число t, означающее время в минутах, прошедшее с начала очередного часа.
 Определить, сигнал какого цвета горит для пешеходов в этот момент.
 Результат вывести на экран в следующем виде:
@@ -40,7 +39,28 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
+        Scanner sc = new Scanner(System.in);
+        double number = sc.nextDouble();
+        sc.close();
+        System.out.println(getTrafficLightColor(number));
+    }
 
+    public static String getTrafficLightColor(Double number) {
+        int minutesInHour = 60;
+        int minutesFromInterval = 5;
+
+        double byTheHour = number % minutesInHour;
+        double byTheMinute = byTheHour % minutesFromInterval;
+
+        String color;
+        if (0 <= byTheMinute && byTheMinute < 3) {
+            color = "зелёный";
+        } else if (3 <= byTheMinute && byTheMinute < 4) {
+            color = "жёлтый";
+        } else {
+            color = "красный";
+        }
+
+        return color;
     }
 }

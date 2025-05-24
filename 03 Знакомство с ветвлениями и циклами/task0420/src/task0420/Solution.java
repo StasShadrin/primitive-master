@@ -1,7 +1,6 @@
 package task0420;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /* 
 Сортировка трех чисел
@@ -18,7 +17,22 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
+        Scanner sc = new Scanner(System.in);
+        int numberOne = sc.nextInt();
+        int numberTwo = sc.nextInt();
+        int numberThree = sc.nextInt();
+        sc.close();
 
+        System.out.println(sort(numberOne, numberTwo, numberThree));
+    }
+
+    public static String sort(int numberOne, int numberTwo, int numberThree) {
+        int max = Math.max(numberOne, numberTwo);
+        max = Math.max(max, numberThree);
+        int min = Math.min(numberOne, numberTwo);
+        min = Math.min(min, numberThree);
+        int median = numberOne + numberTwo + numberThree - (min + max);
+
+        return max + " " + median + " " + min;
     }
 }

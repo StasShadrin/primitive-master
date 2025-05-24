@@ -26,7 +26,15 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        System.out.println(getTriangle());
+    }
 
+    public static String getTriangle() {
+        StringBuilder a = new StringBuilder();
+        for (int i = 1; i <= 10; i++) {
+            a.append("8".repeat(i));
+            a.append("\n");
+        }
+        return a.toString();
     }
 }
